@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    padding-top: 100px; 
+}
+
+/* restrict content and make sure no bar */
+#nav-bar, .grid, #map, footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+canvas {
+    position: relative; 
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+#granim-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+
+    /* semi-transparent */
+    opacity: 0.8; 
+
+    /* content behind navbar*/
+    z-index: -1; 
+}
+
+.year-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px; 
+    margin-bottom: 30px; 
+    background: linear-gradient(45deg, #ff9966, #66ccff);
+    
+    /* wrap the text content */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #494949;
+    margin: 10px auto;
+    display: block;
+    padding-bottom: 30px; 
+    max-width: 90%;
+}
+
+p {
+    padding: 0 15px; 
+    word-wrap: break-word; 
+}
+
+
+/* chart section start here */
+#myChart {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 300px;
+    max-height: 350px;
+
+    /* space for chart side space */
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+/* grid section*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* space between grid items */
+    gap: 20px;
+    max-width: 800px; 
+    margin: 30px auto; 
+    justify-content: center; 
+    padding: 0 20px; 
+}
+
+.grid-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px; 
+    color: #595959; 
+}
+
+.grid-item {
+    width: calc(50% - 10px);
+    max-width: 400px; 
+    margin-bottom: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover;
+    display: block;
+}
+
+.grid-paragraph {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #595959;
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* map section start here */
+#map {
+    width: 100%;
+    height: 500px; 
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* navigation bar styling */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0); 
+
+    /* adding blur effect */
+    backdrop-filter: blur(10px); 
+
+    /* nav is always on top */
+    z-index: 1000; 
+}
+
+/* logo styling */
+.logo img {
+    /* logo size */
+    height: 90px; 
+
+    /* logo effect */
+    filter: drop-shadow(2px 2px 5px rgba(217, 217, 217, 0.3)); 
+}
+
+footer {
+    background-color: #c2e0e3;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Times New Roman", serif;
+    font-weight: normal;
+    line-height: 1.6;
+    padding: 20px 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; 
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0; 
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(72, 72, 72);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #nav-bar {
+        height: 80px;
+        width: 100%; 
+        max-width: none; 
+        background: rgba(255, 255, 255, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    #granim-canvas {
+        width: 100%;
+        max-width: none; 
+    }
+    
+    .year-title {
+        font-size: 70px;
+        margin-top: 60px; 
+    }
+
+    .chart-title {
+        font-size: 22px; 
+        max-width: 70%;
+        margin-bottom: 40px; 
+    }
+
+    #myChart {
+        max-width: 1000px;
+        max-height: 500px;
+    }
+
+    .grid {
+        max-width: 85%;
+        padding: 0 40px;
+    }
+
+    .grid-item {
+        width: calc(33.33% - 15px);
+        max-width: 600px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    .grid-paragraph {
+        text-align: center;
+        font-size: 23px;
+        font-weight: bold;
+        color: #595959;
+        margin: 50px auto;
+        padding: 0 40px;
+        max-width: 800px;
+    }
+
+    #map {
+        max-width: 70%; 
+        margin: 0 auto; 
+        margin-bottom: 40px;
+        border-radius: 10px; 
+    }
+
+    /* Footer */
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .footer-content p {
+        margin: 0 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+
