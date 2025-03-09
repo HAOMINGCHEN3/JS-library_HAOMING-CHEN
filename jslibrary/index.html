@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INM420SAA Js library</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/leaflet.css">
+    <link rel="stylesheet" href="/assets/css/lightbox.css">
+
+</head>
+<body>
+    <!-- nav bar start here -->
+    <header id="nav-bar">
+        <canvas id="granim-canvas"></canvas>
+        <div class="logo">
+            <img src="/assets/images/logo.png" alt="Logo">
+        </div>
+    </header>
+
+    <!-- first paragraph and it's title -->
+    <h1 class="year-title">2024</h1>
+    <p class="chart-title">
+        The most recommended top 6 products in 2024 based on customer rating data.
+    </p>
+
+    <!-- chart section -->
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <!-- grid section -->
+    <div class="grid">
+        <div class="grid-item">
+            <a href="assets/images/1718.jpg" data-lightbox="product-gallery" data-title="Wrangler">
+                <img src="assets/images/1718.jpg" alt="Wrangler">
+            </a>
+            <p class="grid-title">Wrangler</p>
+        </div>
+    
+        <div class="grid-item">
+            <a href="assets/images/80016.jpg" data-lightbox="product-gallery" data-title="Jeep">
+                <img src="assets/images/80016.jpg" alt="Jeep">
+            </a>
+            <p class="grid-title">Jeep</p>
+        </div>
+    
+        <div class="grid-item">
+            <a href="assets/images/80023.jpg" data-lightbox="product-gallery" data-title="Discovery">
+                <img src="assets/images/80023.jpg" alt="Discovery">
+            </a>
+            <p class="grid-title">Discovery</p>
+        </div>
+    
+        <div class="grid-item">
+            <a href="assets/images/80588.jpg" data-lightbox="product-gallery" data-title="Chevrolet">
+                <img src="assets/images/80588.jpg" alt="Chevrolet">
+            </a>
+            <p class="grid-title">Chevrolet</p>
+        </div>
+    
+        <div class="grid-item">
+            <a href="assets/images/80688.jpg" data-lightbox="product-gallery" data-title="Cadillac">
+                <img src="assets/images/80688.jpg" alt="Cadillac">
+            </a>
+            <p class="grid-title">Cadillac</p>
+        </div>
+    
+        <div class="grid-item">
+            <a href="assets/images/81599.jpg" data-lightbox="product-gallery" data-title="F1">
+                <img src="assets/images/81599.jpg" alt="F1">
+            </a>
+            <p class="grid-title">F1</p>
+        </div>
+    </div>
+
+    <p class="grid-paragraph">
+        To look more latest products or collaboration opportunity, please feel free to reach out to us at Mississauga, Toronto.
+    </p>
+
+    <!-- grid end here -->
+
+
+    <!-- map section -->
+    <div id="map"></div> 
+
+    <!-- footer section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p><strong>Address:</strong> Toronto, Mississauga</p>
+            <p><strong>Contact:</strong> +1 123-456-789</p>
+            <p><strong>Name:</strong> HAOMING CHEN</p>
+        </div>
+    </footer>
+    
+    
+
+    <!-- external js library local file and cdn -->
+    <script src="/assets/js/lightbox-plus-jquery.js"></script>
+    <script src="/assets/js/masonry.pkgd.min.js"></script>
+    <script src="/assets/js/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/granim.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
